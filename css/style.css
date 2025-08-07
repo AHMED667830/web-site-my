@@ -1,0 +1,279 @@
+/* Reset default styles and set global font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Beiruti", sans-serif;
+}
+
+/* Custom fonts */
+@font-face {
+    font-family: 'G1';
+    src: url('../font/Garet-Heavy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'G2';
+    src: url('../font/Garet-Heavy.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Global variables */
+:root {
+    --mine-padding: 50px;        /* Common padding value */
+    --text-color-mine: #0F3057;  /* Main accent color */
+}
+
+/* Body styles */
+body {
+    background-color: #1A1B30; /* Dark background */
+    color: #fff;               /* White text */
+}
+
+/* Main container */
+.cont {
+    margin: auto;
+    width: 700px;
+    max-width: 100%;
+}
+
+/* ================= HEADER ================= */
+.cont .header {
+    text-align: right;
+    font-size: 25px;
+    color: #fff;
+}
+
+.cont .header h1 {
+    font-family: 'g1', 'g2' !important;
+}
+
+/* Responsive header padding */
+@media (max-width:663px) {
+    .cont .header h1 {
+        padding: 10px 20px;
+    }
+}
+
+/* ================= ABOUT ME SECTION ================= */
+.cont .about-my {
+    padding-top: var(--mine-padding);
+    padding-bottom: var(--mine-padding);
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cont .about-my .img {
+    text-align: center;
+}
+
+/* Mobile layout for about-me */
+@media (max-width:663px) {
+    .cont .about-my {
+        flex-direction: column;
+    }
+    .cont .about-my .img {
+        margin-bottom: 20px;
+    }
+}
+
+.cont .about-my .text {
+    width: 450px;
+    text-align: right;
+}
+
+/* Smaller devices text adjustment */
+@media (max-width:512px) {
+    .cont .about-my .text {
+        width: 100%;
+    }
+    .cont .about-my .text p {
+        font-size: 19px;
+        width: 340px;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+/* ================= INFORMATION SECTION ================= */
+.cont .information {
+    padding-top: var(--mine-padding);
+    padding-bottom: var(--mine-padding);
+    display: flex;
+    justify-content: center;
+}
+
+/* Mobile info layout */
+@media (max-width:450px) {
+    .cont .information {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+}
+
+/* Info cards container */
+.cont .information .in-cont {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 160px;
+}
+
+/* Single info card */
+.cont .information .in-cont .my {
+    width: 100%;
+    background-color: var(--text-color-mine);
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 100%;
+}
+
+/* Full width info cards on mobile */
+@media (max-width:450px) {
+    .cont .information .in-cont {
+        width: 100%;
+    }
+}
+
+.cont .information .in-cont .my2 {
+    margin-bottom: 0 !important;
+}
+
+.cont .information .in-cont .my i {
+    font-size: 22px;
+}
+
+.cont .information .in-cont .my h3 {
+    font-size: 22px;
+    margin-bottom: 7px;
+}
+
+.cont .information .in-cont .my h4 {
+    font-size: 19px;
+}
+
+/* ================= EXPERIENCES / SKILLS ================= */
+@media (max-width:450px) {
+    .experiences {
+        margin: 10px 0 !important;
+        width: 100% !important;
+    }
+}
+
+.experiences {
+    background-color: var(--text-color-mine);
+    border-radius: 10px;
+    margin-left: 10px;
+    width: 48%;
+}
+
+.experiences h3 {
+    text-align: right;
+    padding: 13px;
+}
+
+.experiences ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.experiences ul li {
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--text-color-mine);
+    border-radius: 5px;
+}
+
+.experiences ul li i {
+    font-size: 50px;
+}
+
+/* ================= PROJECTS CARD ================= */
+.masd {
+    width: 25%;
+    background-color: var(--text-color-mine);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    border-radius: 10px;
+    margin-left: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width:450px) {
+    .masd {
+        margin: 5px 0 !important;
+    }
+}
+
+.masd i {
+    font-size: 22px;
+}
+
+.masd h3 {
+    font-size: 22px;
+    margin-bottom: 7px;
+}
+
+.masd span {
+    font-size: 19px;
+}
+
+@media (max-width:450px) {
+    .masd {
+        width: 100%;
+    }
+}
+
+/* ================= CONTACT SECTION ================= */
+.collmy {
+    padding-top: var(--mine-padding);
+    padding-bottom: var(--mine-padding);
+    width: 100%;
+}
+
+.collmy .mail {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+}
+
+.collmy .mail i {
+    font-size: 40px;
+}
+
+.collmy .mail a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px;
+    background-color: var(--text-color-mine);
+    border-radius: 5px;
+    font-size: 30px;
+    transition: 0.3s;
+    margin: 30px 0 0 0;
+}
+
+.collmy .mail a:hover {
+    background-color: #62a3f1;
+    color: rgba(255, 255, 255, 0.575);
+}
